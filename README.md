@@ -1,4 +1,4 @@
-# Extended-ACL-Deny-Pings-Allow-SSH
+# Extended-ACL-Deny-Pings-Allow-SSH-OSPF
 <img width="620" height="256" alt="image" src="https://github.com/user-attachments/assets/eeb7868f-5857-4ac2-8f05-790212b4abae" />
 
 ## Objective
