@@ -19,22 +19,13 @@ Built in Cisco Packet Tracer with 3 Router + 2 PCs
 
 ## Configuration
 
-### Extended ACLs
+### Extended ACL
 #### RW:
 ip access-list extended DENY_PINGS_WEST
 
  permit tcp 10.10.10.0 0.0.0.255 any eq 22
  
  deny icmp host 10.10.10.10 any echo
- 
-#### RE: 
-ip access-list extended DENY_PINGS_EAST
-
- permit tcp 10.20.20.0 0.0.0.255 any eq 22
- 
- deny icmp host 10.10.10.10 any echo
- 
- deny icmp host 10.20.20.20 any echo
  
 ### OSPF Routing
 #### RW: 
@@ -49,27 +40,4 @@ router ospf 100
  
  network 10.10.10.0 0.0.0.255 area 0
 
-#### HQ: 
-
-router ospf 100
-
- router-id 1.1.1.1
  
- log-adjacency-changes
- 
- network 10.1.1.0 0.0.0.255 area 0
- 
- network 10.2.2.0 0.0.0.255 area 0
- 
- network 67.19.23.0 0.0.0.255 area 0
-
-#### RE: 
-router ospf 100
-
- router-id 3.3.3.3
- 
- log-adjacency-changes
- 
- network 10.20.20.0 0.0.0.255 area 0
- 
- network 10.2.2.0 0.0.0.255 area 0
